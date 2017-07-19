@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
     <metadata>
         <id>UpgradeMvc3ToMvc5</id>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
         <title>Auto Upgrade MVC 3 To MVC 5</title>
         <authors>Sathya Prabu Rajagopal</authors>
         <owners>Sathya Prabu Rajagopal</owners>
@@ -16,11 +16,12 @@
         <tags>MVC Upgrade</tags>
         <dependencies>
             <group targetFramework=".NETFramework4.5.2">
-                <dependency id="Microsoft.AspNet.Mvc" version="5.2.3" />
+                <dependency id="Microsoft.AspNet.Mvc" version="[5.2.3]" />
             </group>
         </dependencies>
     </metadata>
     <files>
-        <file src="install.ps1" target="install.ps1" />
+        <file src="tools\**" target="tools" />
+        <file src="content\**" target="content" />
     </files>
 </package>
